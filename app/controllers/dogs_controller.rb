@@ -16,7 +16,10 @@ class DogsController < ApplicationController
       flash.now[:notice] = "Something went wrong and we couldn't save your dog."
       render :new
     end
+  end
 
+  def show
+    @dog = Dog.find(params[:id])
   end
 
   private
