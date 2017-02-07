@@ -19,7 +19,7 @@
         <td><%= dog.name %></td>
         <td><%= dog.breed %></td>
         <td><%= dog.age %></td>
-        <td><%= dog.owner %></td>
+        <td><%= dog.owner.try(:name) %></td>
         <td><%= link_to "Show", dog_path(dog) %></td>
         <td><%= link_to "Edit", edit_dog_path(dog) %></td>
         <td>
